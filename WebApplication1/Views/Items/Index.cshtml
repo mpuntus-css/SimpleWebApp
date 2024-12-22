@@ -1,21 +1,27 @@
 ﻿@model List<string>
 
+
 <h1>Item List</h1>
 
 <form method="post" asp-action="Add">
-    <input type="text" name="itemName" placeholder="Enter item name" required />
+    <input type="text" name="itemName" placeholder="Enter a product name" required />
     <button type="submit">Add</button>
 </form>
 
-<ul>
-    @foreach (var item in Model)
-    {
-        <li>
-            @item
-            <form method="post" asp-action="Delete" style="display:inline;">
-                <input type="hidden" name="itemName" value="@item" />
-                <button type="submit">Delete</button>
-            </form>
-        </li>
-    }
-</ul>
+<div class="d-flex justify-content-center align-items-center vh-100">
+
+    <div class="text-center">
+        <ul class="list-unstyled">
+            @foreach (var item in Model)
+            {
+                <li class="mb-2">
+                    <span>@item</span>
+                    <form method="post" asp-action="Delete" style="display:inline;">
+                        <input type="hidden" name="itemName" value="@item" />
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
