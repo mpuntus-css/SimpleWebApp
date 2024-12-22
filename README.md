@@ -1,21 +1,37 @@
-# SimpleWebApp
+# Technologies Used
+* Language: C#
+* Framework: ASP.NET Core MVC
+* Data Storage: JSON file (data.json)
+* Design Patterns: Dependency Injection, Decorator Pattern
+* Frontend: HTML and Razor Views
+* Asynchronous Programming: Async/Await for non-blocking I/O operations
 
-# Project Overview
-Frontend: Use Razor Pages or ASP.NET Core MVC for UI.
-Backend: ASP.NET Core Web Application for handling logic.
-Data Storage: JSON file for reading/writing data.
-Key Concepts:
-Dependency Injection (DI)
-Single Responsibility Principle (SRP)
-Asynchronous Programming
-Interfaces and Design Patterns
+# Technical Features Implemented:
+1. [10 points] Dependency Injection:
+* IDataService is injected into the controller to handle data operations.
 
-# Features
-[10 points] Dependency Injection: Inject IDataService into the controller.
-[10 points] Single Responsibility Principle: Separate classes for data access, logging, and entity structure.
-[10 points] JSON Handling: Read, Delete, and Add data to a data.json JSON file 
-[10 points] An asynchronous method using the async and await keywords: Use async methods to store and get data from a JSON file
-[10 points] Interface Usage: IDataService defines operations.
-[10 points] Decorator Pattern: LoggingDataService extends JsonDataService functionality.
-[10 points] Inheritance: BaseEntity and Item demonstrate parent-child relationship.
-[10 points] Implement multiple web pages or Windows forms: The web application has Welcome page and Shopping List page.
+2. [10 points] Single Responsibility Principle (SRP):
+* The application is divided into separate classes, each with a clear responsibility:
+
+JsonDataService handles data operations.
+LoggingDataService provides logging functionality.
+ItemsController handles user requests.
+[10 points] JSON Handling:
+The application reads, writes, and deletes data to/from a data.json file, providing persistent storage for the shopping list.
+
+[10 points] Asynchronous Programming:
+Data operations are implemented using async/await to perform non-blocking I/O operations.
+
+[10 points] Interface Usage:
+IDataService defines operations for data retrieval and storage, ensuring the separation of concerns.
+
+[10 points] Decorator Pattern:
+LoggingDataService wraps JsonDataService to add logging functionality without altering the core data handling logic.
+
+[10 points] Inheritance:
+BaseEntity and Item demonstrate a parent-child relationship, with Item inheriting from BaseEntity.
+
+[10 points] Multiple Web Pages:
+The application includes multiple pages:
+Home Page: Provides a welcome message and navigation links.
+Shopping List Page: Allows users to add, view, and delete items.
