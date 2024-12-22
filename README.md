@@ -12,26 +12,26 @@
 
 2. [10 points] Single Responsibility Principle (SRP):
 * The application is divided into separate classes, each with a clear responsibility:
+- JsonDataService handles data operations.
+- LoggingDataService provides logging functionality.
+- ItemsController handles user requests.
 
-JsonDataService handles data operations.
-LoggingDataService provides logging functionality.
-ItemsController handles user requests.
-[10 points] JSON Handling:
-The application reads, writes, and deletes data to/from a data.json file, providing persistent storage for the shopping list.
+3. [10 points] JSON Handling:
+* The application reads, writes, and deletes data to/from a data.json file, providing persistent storage for the shopping list.
 
-[10 points] Asynchronous Programming:
-Data operations are implemented using async/await to perform non-blocking I/O operations.
+4. [10 points] Asynchronous Programming:
+* Data operations are implemented using async/await to perform non-blocking I/O operations.
 
-[10 points] Interface Usage:
-IDataService defines operations for data retrieval and storage, ensuring the separation of concerns.
+5. [10 points] Interface Usage:
+* IDataService defines operations for data retrieval and storage, ensuring the separation of concerns.
 
-[10 points] Decorator Pattern:
-LoggingDataService wraps JsonDataService to add logging functionality without altering the core data handling logic.
+6. [10 points] Decorator Pattern:
+* LoggingDataService wraps JsonDataService to add logging functionality without altering the core data handling logic.
 
-[10 points] Inheritance:
-BaseEntity and Item demonstrate a parent-child relationship, with Item inheriting from BaseEntity.
+7. [10 points] Inheritance:
+* BaseEntity and Item demonstrate a parent-child relationship, with Item inheriting from BaseEntity.
 
-[10 points] Multiple Web Pages:
-The application includes multiple pages:
-Home Page: Provides a welcome message and navigation links.
-Shopping List Page: Allows users to add, view, and delete items.
+8. [10 points] Multiple Web Pages:
+* The application includes multiple pages:
+- Home Page: Provides a welcome message and navigation links.
+- Shopping List Page: Allows users to add, view, and delete items.
