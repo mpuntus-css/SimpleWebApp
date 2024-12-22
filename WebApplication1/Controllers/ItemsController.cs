@@ -31,5 +31,16 @@ namespace WebApplication1.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(string itemName)
+        {
+            var data = await _dataService.GetDataAsync();
+            data.Remove(itemName); 
+            await _dataService.SaveDataAsync(data);
+
+            return RedirectToAction("Index");
+        }
+
     }
 }
