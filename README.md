@@ -11,10 +11,10 @@
 * IDataService is injected into the controller to handle data operations.
 
 2. [10 points] Single Responsibility Principle (SRP):
-* The application is divided into separate classes, each with a clear responsibility:
-- JsonDataService handles data operations.
-- LoggingDataService provides logging functionality.
-- ItemsController handles user requests.
+- The application is divided into separate classes, each with a clear responsibility:
+  - JsonDataService handles data operations.
+  - LoggingDataService provides logging functionality.
+  - ItemsController handles user requests.
 
 3. [10 points] JSON Handling:
 * The application reads, writes, and deletes data to/from a data.json file, providing persistent storage for the shopping list.
@@ -33,5 +33,5 @@
 
 8. [10 points] Multiple Web Pages:
 * The application includes multiple pages:
-- Home Page: Provides a welcome message and navigation links.
-- Shopping List Page: Allows users to add, view, and delete items.
+  - Home Page: Provides a welcome message and navigation links.
+  - Shopping List Page: Allows users to add, view, and delete items.
